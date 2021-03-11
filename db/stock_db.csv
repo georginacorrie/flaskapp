@@ -1,0 +1,5 @@
+datetime,geocode,input_address,lat,lng,product_type,resolved_address,stock_level
+2020-09-25T10:56:15z,"51.5432383,-0.047506",tesco london,51.5432383,-0.047506,toilet_paper,"180 Well St, London E9 6QU, UK",2.0
+2020-09-25T12:30:17z,"51.5432383,-0.047506",tesco london,51.5432383,-0.047506,toilet_paper,"180 Well St, London E9 6QU, UK",3.0
+2021-01-27T16:52:07z,"51.4456351,-0.1516179",waitrose balham,51.445635100000004,-0.15161789999999997,soap,"134-152 Balham High Rd, Balham, London SW12 8AY, UK",2.0
+2021-02-08T11:51:16z,"51.4387779,-0.1559101",tesco balham,51.4387779,-0.1559101,toilet_paper,"219 Balham High Rd, Tooting, London SW17 7BQ, UK",2.0
