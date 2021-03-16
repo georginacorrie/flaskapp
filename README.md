@@ -40,6 +40,12 @@ Run the contain you have built (this command automatically builds the container 
 docker-compose up
 ```
 
+### OR run the app in your terminal
+```bash
+python3 flask-app/main.py
+```
+
+
 Output on the development server should look like: 
 
 ```bash
