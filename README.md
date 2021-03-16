@@ -1,9 +1,10 @@
 # How to create a simple web app using Flask
 
+Flask is a very popular python web-framework used by the machine learning community. 
 
 The contents of this project is a template to show how how to create APIs in a Flask framework, key concepts include: 
-1) Auto-Documentation of APIs according to open API specification
-2) Defining & parsing API arguments using schemas 
+1) Auto-Documentation of APIs according to open API specification (not automatic in Flask)
+2) Defining & parsing different API arguments using schemas 
 3) API blueprints
 3) App Error Handling
 4) Containerisation using docker
@@ -15,7 +16,7 @@ There are **two** options for installation:
 2. Install requirements.txt 
 
 ### Use docker (recommended)
-This example app uses docker compose (if you've never come across it before check it out [here]{https://docs.docker.com/compose/}), it makes managing multiple docker containers very easy, they are listed in the docker-compose.yaml file. 
+This example app uses docker compose (if you've never come across it before check it out [here](https://docs.docker.com/compose/)), it makes managing multiple containers very easy. The containers used in this app are listed in the docker-compose.yaml file. 
 
 The below command builds a docker container with all the required python packages in *flask-app/requirements.txt*. 
 ```bash
@@ -24,7 +25,7 @@ docker-compose build flask-app
 NB: You do not need to do this step as the "run" command builds the container for you. BUT This command is useful if you need to rebuild the container with updated packages or if you change the docker file. 
 
 
-### Install requirements locally
+### OR Install requirements locally
 ```bash
 pip install -r ./flask-app/requirements.txt
 ```
@@ -34,10 +35,16 @@ There are volumes mounted on the container
 
 ## Run the app
 ### Use docker (recommended)
-Run the contain you have built (this command automatically build the container if you run it for the first time) 
+Run the contain you have built (this command automatically builds the container if you run it for the first time) 
 ```bash
 docker-compose up
 ```
+
+### OR run the app in your terminal
+```bash
+python3 flask-app/main.py
+```
+
 
 Output on the development server should look like: 
 
@@ -52,7 +59,9 @@ flask-app_1  |    Use a production WSGI server instead.
 flask-app_1  |  * Debug mode: on
 flask-app_1  |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ```
+## Try it Out
 
+Once you have your app running, you can navigate to http://0.0.0.0:5000/swagger to inspect the open API documentation. 
 
 ## Useful Links
 
