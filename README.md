@@ -14,25 +14,44 @@ There are **two** options for installation:
 1. Using docker (recommended)
 2. Install requirements.txt 
 
-### Use docker
+### Use docker (recommended)
+This example app uses docker compose (if you've never come across it before check it out [here]{https://docs.docker.com/compose/}), it makes managing multiple docker containers very easy, they are listed in the docker-compose.yaml file. 
 
-The below command builds a docker container with all the required python packages in requirements.txt. 
+The below command builds a docker container with all the required python packages in *flask-app/requirements.txt*. 
 ```bash
 docker-compose build flask-app
 ```
+NB: You do not need to do this step as the "run" command builds the container for you. BUT This command is useful if you need to rebuild the container with updated packages or if you change the docker file. 
 
 
 ### Install requirements locally
 ```bash
-pip install -r requirements.txt
+pip install -r ./flask-app/requirements.txt
 ```
 This app runs in a docker container on port 5000. 
 
 There are volumes mounted on the container
 
 ## Run the app
+### Use docker (recommended)
+Run the contain you have built (this command automatically build the container if you run it for the first time) 
+```bash
+docker-compose up
+```
 
+Output on the development server should look like: 
 
+```bash
+Creating network "flaskapp_default" with the default driver
+Creating flaskapp_flask-app_1 ... done
+Attaching to flaskapp_flask-app_1
+flask-app_1  |  * Serving Flask app "app" (lazy loading)
+flask-app_1  |  * Environment: production
+flask-app_1  |    WARNING: This is a development server. Do not use it in a production deployment.
+flask-app_1  |    Use a production WSGI server instead.
+flask-app_1  |  * Debug mode: on
+flask-app_1  |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+```
 
 
 ## Useful Links
